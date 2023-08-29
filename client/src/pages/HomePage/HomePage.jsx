@@ -32,7 +32,7 @@ function HomePage() {
   return (
     <>
       <Input
-        icon={<IconSearch/>}
+        icon={<IconSearch />}
         placeholder="Your email"
         rightSection={
           <Button
@@ -43,7 +43,6 @@ function HomePage() {
           </Button>
         }
       ></Input>
-
       <div className={style.containerCart}>
         {arr.map((el, index) => {
           return (
