@@ -1,0 +1,41 @@
+$colorHeader: #5e96fc;
+.containerCart {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+}
+.cart {
+  border-radius: 12px;
+  border: 1px solid #eaebed;
+  background: #fff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+
+  h1 {
+    color: $colorHeader;
+    font: 600 20px "Inter";
+  }
+  .salary {
+    font: 600 20px "Inter";
+  }
+  p {
+    color: #232134;
+    line-height: 20px; /* 125% */
+  }
+  .outerSalaryDay {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .icon {
+    background-image: url("./assets/M.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+  }
+}
