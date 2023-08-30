@@ -8,7 +8,6 @@ import { useState, useEffect } from "react";
 function HomePage() {
   const [elements, setElements] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [activePage, setPage] = useState(1)
   const elementsPerPage=5;
 
   useEffect(()=>setElements(arrayOfVacancies),[currentPage])
@@ -19,10 +18,10 @@ function HomePage() {
   const currentElements = elements.slice(indexOfFirstElement, indexOfLastElement);
   //смена страницы
 
-  function pagination(){
-    const number = event.target.textContent;
-    setCurrentPage(number);
-    setPage(number)
+  function pagination(page){
+
+    setCurrentPage(page);
+
   }
   return (
     <>
@@ -52,7 +51,7 @@ function HomePage() {
           );
         })}
       </div>
-      <Pagination value={activePage} onChange={pagination} total={Math.ceil(arrayOfVacancies.length / elementsPerPage)} />;
+      <Pagination value={currentPage} onChange={pagination} total={Math.ceil(arrayOfVacancies.length / elementsPerPage) } />;
 
     </>
   );
